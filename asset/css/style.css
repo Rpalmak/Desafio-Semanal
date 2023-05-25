@@ -1,0 +1,19 @@
+body
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-text, .card-footer p{
+    color:#707070 !important;
+}
+
+.card-footer h5
+{
+    color: #28A745 !important;
+}
+
+form
+{
+    background-color: #28A745;
+}
+
