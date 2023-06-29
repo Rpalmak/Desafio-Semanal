@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(231, 231, 231);
+  font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -52,6 +53,7 @@ aside span{
   margin-bottom: 5px;
 }
 li:hover{
+  cursor: pointer;
   background-color: rgb(201, 199, 199);
 }
 
