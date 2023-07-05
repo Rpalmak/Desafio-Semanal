@@ -4,85 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="asset/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="grid-container">
     <header>
-        <nav>
-            <h3>Mi Ecommerce</h3>
-        </nav>
+        <!--Top Header-->
+        <div class="topHeader">
+            <i class="fas fa-seedling fa-2x" style="color: #ffffff;"></i>
+            <h4 class="mb-0">Plantas</h4>
+            <i class=" burger-menu fas fa-bars fa-2x" style="color: #ffffff;"></i>
+        </div>
+        
+        <!--Filtro-->
+        <div class="filter">
+            <h4>Ordenar Por:</h4>
+            <select name="select">
+                <option value="value1" selected>Precio</option>
+                <option value="value2">Tamaño</option>
+                <option value="value3">Tipo</option>
+            </select>
+        </div>
+    <!--Header-->   
     </header>
+    <!--Main-->  
     <main>
-        <aside>
-            <ul>
-                <h3>Categorías</h3>
-                <li>
-                    <div class="category-name">Accesorios </h4> <span>(12)</div>
-                </li>
-                <li>
-                    <div class="category-name">Perfumes </h4><span>(05)</div>
-                </li>
-                <li>
-                    <div class="category-name">Ropa </h4><span>(22)</div>
-                </li>
-                <li>
-                    <div class="category-name">Zapatos </h4><span>(07)</div>
-                </li>
-            </ul>
-        </aside>
-        <div class="container">
-            <div class="item">
-                <img src="asset/images/1million.webp" alt="Perfume 1 Million de Paco Rabanne">
-                <div class="etiqueta-info">
-                    <h2>"1 Million"</h2>
-                    <h3>Paco Rabanne</h3>
-                    <p>$8.990</p>
-                </div>
-                <div class="etiqueta-comprar">
-                    <h4>Comprar</h4>
-                </div>
+        <div class="product">
+            <div class="product-image">
             </div>
-            <div class="item">
-                <img src="asset/images/carolinaherrera.webp" alt="Perfume bad Boy de Carolina Herrera">
-                <div class="etiqueta-info">
-                    <h2>"Bad Boy"</h2>
-                    <h3>Carolina Herrera</h3>
-                    <p>$10.590</p>
-                </div>
-                <div class="etiqueta-comprar">
-                    <h4>Comprar</h4>
-                </div>
-            </div>
-            <div class="item">
-                <img src="asset/images/jeanpaulgaultier.webp" alt="Perfume Le Male de Jean Paul Gaultier">
-                <div class="etiqueta-info">
-                    <h2>"Le Male"</h2>
-                    <h3>Jean Paul Gaultier</h3>
-                    <p>$15.500</p>
-                </div>
-                <div class="etiqueta-comprar">
-                    <h4>Comprar</h4>
-                </div>
-            </div>
-            <div class="item">
-                <img src="asset/images/pacorabanne.webp" alt="Perfume Invictus de Paco Rabanne">
-                <div class="etiqueta-info">
-                    <h2>"Invictus"</h2>
-                    <h3>Paco Rabanne</h3>
-                    <p>$6.990</p>
-                </div>
-                <div class="etiqueta-comprar">
-                    <h4>Comprar</h4>
-                </div>
+            <div class="product-description">
+                <h3>Aspidistra</h3>
+                <button>Ver más</button>
             </div>
         </div>
+        <!--Paginación-->
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+          </div>
     </main>
-    <footer>@miecommerce</footer>
-</div>
-</body>
+    <!--Main-->  
+    <!--Footer-->  
+    <footer>
+        <div class="social-network">
+            <i class="fab fa-facebook fa-2x" style="color: #ffffff;"></i>
+            <i class="fab fa-instagram fa-2x" style="color: #ffffff;"></i>
+        </div>
+        <p>Todos los derechos reservados</p>
+    </footer>
 
+    
+</body>
 </html>
