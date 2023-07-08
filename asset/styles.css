@@ -7,7 +7,7 @@ body{
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   /* Estilos para celulares */
   * {
     box-sizing: border-box;
@@ -131,124 +131,9 @@ body{
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* Estilos para tablets */
-  header {
-    padding: 0;
-    height: 137px;
-  }
-  .topHeader {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 5px;
-    padding-left: 5px;
-    background-color: #283618;
-    height: 50px;
-    width: 100%;
-  }
-  .topHeader h4{
-   color: white;
-  }
-  .burger-menu{
-    margin-right: 20px;
-    margin-left: auto;
-  }
-  .filter {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #606C38;
-    width: 100%;
-  }
-  .filter h4{
-    margin-top: 10px;
-    margin-bottom: 8px;
-  }
-  select{
-    height: 30px;
-    width: 70%;
-    margin-bottom: 20px;
-  }
-  main {
-    background-color: #FEFAE0;
-    height: calc(100vh - 218px);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .product{
-    height: 300px;
-    width: 250px;
-    background-color: #dda15e;
-    box-shadow: 10px 10px 5px lightgray;
-  }
-  .product-image{
-    background-image: url("images/aspidistra.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 80%;
-    border: 5px solid #bc6c25;
-  }
-  .product-description{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 20%;
-    background-color: #bc6c25;
-  }
-  .product-description h3{
-    color: white;
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  .product-description button {
-    color: white;
-    background-color: #606C38;
-    width: 30%;
-    height: 30px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  .product-description button:hover {
-    background-color: #283618;
-  }
-  .pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color .3s;
-    border: 1px solid #ddd;
-    margin-top: 30px;
-  }
-  footer p{
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    color: white;
-    padding-bottom: 10px;
-  }
-  .social-network{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-  }
-  footer {
-    background-color: #606C38;
-    height: auto;
-    width: 100%;
-  }
-}
 
-@media (min-width: 1024px) {
+
+@media (min-width: 576px) {
   /* Estilos para escritorio */
 
   html, body {
@@ -276,7 +161,7 @@ body{
     grid-template-areas:
       "topHeader filter"
       "topHeader main"
-      "footer pagination";
+      "footer space";
   }
   
   .topHeader {
@@ -319,8 +204,15 @@ body{
     grid-area: main;
     background-color: #FEFAE0;
   }
+  .space {
+    grid-area: space;
+    background-color: #FEFAE0;
+  }
+  .desktop-products{
+    margin-top: 40px;
+    margin-left: 40px;
+  }
   .product{
-    grid-area:product;
     height: 250px;
     width: 200px;
     background-color: #dda15e;
@@ -330,7 +222,6 @@ body{
     background-image: url("images/aspidistra.jpg");
     background-size: cover;
     background-position: center;
-    width: 100%;
     height: 80%;
     border: 5px solid #bc6c25;
   }
@@ -360,6 +251,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 20%;
     background-color: #bc6c25;
   }
   .product-description h3{
@@ -381,17 +273,17 @@ body{
   .product-description button:hover {
     background-color: #283618;
   }
-  .pagination {
-    grid-area: pagination;
+  .pagination{
+    text-align: center;
+    margin-top: 40px;
   }
   .pagination a {
     color: black;
-    float: left;
+    float: inherit;
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color .3s;
     border: 1px solid #ddd;
-    margin-top: 30px;
   }
 
 
