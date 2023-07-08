@@ -15,6 +15,11 @@ body{
   .desktop-products{
     display: none;
   }
+  .title-logo{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
 
   header {
     padding: 0;
@@ -129,6 +134,9 @@ body{
     height: auto;
     width: 100%;
   }
+  .categories{
+    display: none;
+  }
 }
 
 
@@ -167,10 +175,15 @@ body{
   .topHeader {
     grid-area: topHeader;
     display: flex;
-    align-items: start;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
     background-color: #283618;
     width: 200px;
+  }
+  .title-logo{
+    display: flex;
+    flex-direction: row;
   }
   
   .topHeader h4 {
@@ -179,6 +192,16 @@ body{
   
   .burger-menu {
     display: none;
+  }
+  
+  .categories ul{
+    margin-top: 40px;
+    padding-left: 0;
+    color: white;
+    list-style-type: none;
+  }
+  .categories ul li{
+    margin-top: 10px;
   }
   
   .filter {
