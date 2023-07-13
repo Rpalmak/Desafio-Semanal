@@ -1,9 +1,14 @@
 
+@font-face {
+  font-family: "Norse";
+  src: url("font/Norse.otf") format("opentype");
+}
 
 body{
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Norse', sans-serif;
+  background-attachment: fixed;
 }
 
 
@@ -12,27 +17,75 @@ body{
   * {
     box-sizing: border-box;
   }
+  :target {
+    animation: fade-in 3s ease;
+  }
+  
+  section {
+    scroll-margin-top: 100px;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  body{
+    background-image: url("images/bg2.webp");
+    background-size: cover;
+    background-position: top;
+  }
+  .inicio h1, .catalogo h1, .eventos h1, .ubicacion h1{
+    font-size: 60px;
+    text-align: center;
+    color: white;
+  }
+  .inicio img {
+    width: 100%;  
+  }
+  .footer-top{
+    display: none;
+  }
+  .inicio p{
+    font-size: 20px;
+  }
   .desktop-products{
     display: none;
+  }
+  .catalogo, .inicio, .eventos, .ubicacion{
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .title-logo{
     display: flex;
     align-items: center;
     flex-direction: row;
   }
-
+  .title-logo img{
+    width: 60px;
+    height: 60px;
+  }
   header {
     padding: 0;
     height: 137px;
   }
   .topHeader {
+    color: white;
     display: flex;
     align-items: center;
     flex-direction: row;
     gap: 5px;
     padding-left: 5px;
-    background-color: #283618;
-    height: 50px;
+    background-color: #303030;
+    height: 60px;
     width: 100%;
   }
   .topHeader h4{
@@ -43,12 +96,12 @@ body{
     margin-left: auto;
   }
   .filter {
-    
+    color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #606C38;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
   }
   .filter h4{
     margin-top: 10px;
@@ -60,8 +113,6 @@ body{
     margin-bottom: 20px;
   }
   main {
-    background-color: #FEFAE0;
-    height: calc(100vh - 218px);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -71,51 +122,64 @@ body{
   .product{
     height: 300px;
     width: 250px;
-    background-color: #dda15e;
-    box-shadow: 10px 10px 5px lightgray;
+    transition: transform 1s;
   }
   .product-image{
-    background-image: url("images/aspidistra.jpg");
+    background-image: url("images/axe4.webp");
     background-size: cover;
     background-position: center;
-    width: 100%;
     height: 80%;
-    border: 5px solid #bc6c25;
+  }
+  .product:hover{
+    transform: scale(1.1);    
   }
   .product-description{
+    padding-top: 10px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 20%;
-    background-color: #bc6c25;
   }
   .product-description h3{
     color: white;
+    font-size: 30px;
     text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .product-description button {
-    color: white;
-    background-color: #606C38;
-    width: 30%;
-    height: 30px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 10px;
+    display: none;
   }
-  .product-description button:hover {
-    background-color: #283618;
+  .pagination{
+    text-align: center;
+    margin-top: 40px;
   }
   .pagination a {
-    color: black;
-    float: left;
+    color: white;
+    background-color: #4e4e4e;
+    float: inherit;
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color .3s;
     border: 1px solid #ddd;
-    margin-top: 30px;
+  }
+  .main-event{
+    width: 100%;
+  }
+  .sub-event{
+    color: white;
+  }
+  .sub-event img{
+    width: 300px;
+    height: 200px;
+  }
+  .sub-event-main{
+    justify-content: center;
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
   }
   footer p{
     padding: 0;
@@ -130,7 +194,7 @@ body{
     text-align: center;
   }
   footer {
-    background-color: #606C38;
+    background-color: #303030;
     height: auto;
     width: 100%;
   }
@@ -141,12 +205,37 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 576px) {
   /* Estilos para escritorio */
 
   html, body {
     height: 100%;
     margin: 0;
+  }
+  .inicio h1, .catalogo h1, .eventos h1, .ubicacion h1{
+    font-size: 60px;
+    text-align: center;
+    color: white;
+  }
+  .inicio img {
+    width: 50%;
+    height: 50%;  
+  }
+  
+  
+  .inicio p{
+    font-size: 20px;
   }
 
   .mobile-product{
@@ -164,6 +253,8 @@ body{
   body {
     width: 100%;
     display: grid;
+    background-image: url("images/bg2.webp");
+    background-size: cover;
     grid-template-columns: auto 1fr; 
     grid-template-rows: auto 1fr  auto; 
     grid-template-areas:
@@ -174,46 +265,64 @@ body{
   
   .topHeader {
     grid-area: topHeader;
+    position: fixed;
     display: flex;
+    text-align: center;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    background-color: #283618;
+    background-color: #303030;
+    height: 100%;
     width: 200px;
+  }
+  .topHeader li{
+    font-size: 30px;
+    transition: transform 1s;
+  }
+  .topHeader li:hover{
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
   }
   .title-logo{
     display: flex;
     flex-direction: row;
   }
+  .title-logo img{
+    width: 60px;
+    height: 60px;
+  }
   
-  .topHeader h4 {
+  .topHeader h3 {
     color: white;
   }
   
   .burger-menu {
     display: none;
   }
-  
   .categories ul{
+    padding: 0;
+    margin: 0;
+  }
+  .categories ul a{
+    text-decoration: none;
     margin-top: 40px;
-    padding-left: 0;
     color: white;
-    list-style-type: none;
   }
   .categories ul li{
+    list-style-type: none;
     margin-top: 10px;
   }
   
-  .filter {
+  .filter-desktop {
     color: white;
     grid-area: filter;
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
-    background-color: #606C38;
   }
   
-  .filter h4, .fa-seedling {
+  .filter-desktop h4, .fa-seedling {
     margin-top: 10px;
     margin-bottom: 8px;
   }
@@ -225,89 +334,128 @@ body{
   
   main {
     grid-area: main;
-    background-color: #FEFAE0;
   }
   .space {
     grid-area: space;
-    background-color: #FEFAE0;
+  }
+  .filter{
+    display: none;
+  }
+  .catalogo, .inicio, .eventos, .ubicacion{
+    margin-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .desktop-products{
+    justify-content: left;
     margin-top: 40px;
-    margin-left: 40px;
   }
   .product{
     height: 250px;
     width: 200px;
-    background-color: #dda15e;
-    box-shadow: 10px 10px 5px lightgray;
+    transition: transform 1s;
   }
   .product-image{
-    background-image: url("images/aspidistra.jpg");
     background-size: cover;
     background-position: center;
     height: 80%;
-    border: 5px solid #bc6c25;
+  }
+  .product:hover{
+    transform: scale(1.1);    
   }
   .image-0{
-    background-image: url("images/aspidistra.jpg");
+    background-image: url("images/axe1.webp");
   }
   .image-1{
-    background-image: url("images/ficus.webp");
+    background-image: url("images/axe2.jpg");
   }
   .image-2{
-    background-image: url("images/jade.jpeg");
+    background-image: url("images/axe3.jpg");
   }
   .image-3{
-    background-image: url("images/maranta.jpeg");
+    background-image: url("images/axe4.webp");
   }
   .image-4{
-    background-image: url("images/monstera.PNG");
+    background-image: url("images/axe5.jpeg");
   }
   .image-5{
-    background-image: url("images/sanseviera.jpg");
+    background-image: url("images/axe6.webp");
   }
   .image-6{
-    background-image: url("images/rosa_blanca.png");
+    background-image: url("images/axe7.jpg");
   }
 
   .product-description{
+    padding-top: 10px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 20%;
-    background-color: #bc6c25;
   }
   .product-description h3{
     color: white;
+    font-size: 30px;
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
   }
   .product-description button {
-    color: white;
-    background-color: #606C38;
-    width: 50%;
-    height: 30px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  .product-description button:hover {
-    background-color: #283618;
+    display: none;
   }
   .pagination{
     text-align: center;
     margin-top: 40px;
   }
   .pagination a {
-    color: black;
+    color: white;
+    background-color: #4e4e4e;
     float: inherit;
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color .3s;
     border: 1px solid #ddd;
   }
+  .sub-event{
+    color: white;
+  }
+  .sub-event img{
+    width: 300px;
+    height: 200px;
+  }
+  .sub-event-main{
+    justify-content: center;
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  :target {
+    animation: fade-in 3s ease;
+  }
+  
+  section {
+    scroll-margin-top: 100px;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+
+
+
+
 
 
   .social-network{
@@ -319,8 +467,8 @@ body{
     text-align: center;
     grid-area: footer;
     font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
     width: 200px;
-    background-color: #606C38;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -328,6 +476,22 @@ body{
     color: white;
   }
   footer p{
+    margin-top: 3px;
+  }
+
+  .footer-top {
+    text-align: center;
+    grid-area: footer;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    color: white;
+  }
+  .footer-top p{
     margin-top: 3px;
   }
   
