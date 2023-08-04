@@ -5,201 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="asset/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/styles.css">
     <title>Document</title>
 </head>
 
 <body>
-    <!--Top Header-->
-    <div class="topHeader">
-        <div class="title-logo">
-            <img src="asset/images/logo.png">
-            <h3 class="mb-0">Viking Store</h3>
-            <img src="asset/images/logo.png">
-        </div>
-        <div class="categories">
-            <ul>
-                <li><a href="#quienessomos-section">Quienes Somos</a></li>
-                <li><a href="#catalogo-section">Productos</a></li>
-                <li><a href="#eventos-section">Eventos</a></li>
-                <li><a href="#ubicacion-section">Ubicación</a></li>
-            </ul>
-        </div>
-        <i class=" burger-menu fas fa-bars fa-2x" style="color: #ffffff;"></i>
-        <div class="footer-top">
-            <div class="social-network">
-                <a href="https://es.wikipedia.org/wiki/Facebook" target="_blank">
-                    <i class="fab fa-facebook fa-2x" style="color: #ffffff;"></i>
-                </a>
-                <a href="https://es.wikipedia.org/wiki/Instagram" target="_blank">
-                    <i class="fab fa-instagram fa-2x" style="color: #ffffff;"></i>
-                </a>
-            </div>
-            <p>Todos los derechos reservados</p>
-        </div>
-    </div>
 
-    <!--Filtro-->
-    <div class="filter">
-        <h4>Ordenar Por:</h4>
-        <select name="select">
-            <option value="value1" selected>Precio</option>
-            <option value="value2">Tamaño</option>
-            <option value="value3">Tipo</option>
-        </select>
-    </div>
-    <!--Main-->
     <main>
-        <!--Quienes somos-->
-        <section class="inicio" id="quienessomos-section">
-            <h1>Quienes somos</h1>
-            <p>En Vikings Store, nos enorgullece ser la tienda de referencia para los amantes de la historia vikinga y
-                los entusiastas de los artefactos vikingos. Sumérgete en el fascinante mundo de los antiguos guerreros
-                nórdicos y descubre una amplia gama de productos auténticos que te transportarán a la era de los
-                vikingos.</p>
-            <p>Nuestra tienda es un santuario para aquellos que buscan experimentar la grandeza y la valentía de los
-                vikingos. Nos apasiona proporcionar a nuestros clientes artículos de la más alta calidad, cuidadosamente
-                seleccionados y elaborados por expertos artesanos. Cada pieza que encontrarás en nuestras estanterías
-                cuenta con una autenticidad inigualable y está diseñada para transmitir la esencia del espíritu vikingo.
-            </p>
-            <p>Si eres un guerrero en busca de un arma legendaria, te maravillarás con nuestra colección de hachas y
-                espadas vikingas. Estas armas, elaboradas con maestría y siguiendo técnicas ancestrales, capturan la
-                fuerza y la destreza de los guerreros vikingos. Cada detalle, desde la empuñadura hasta la hoja, ha sido
-                cuidadosamente elaborado para ofrecerte un arma poderosa y duradera.</p>
-            <img src="asset/images/quienes-somos.jpg">
-        </section>
-        <!--Catálogo-->
-        <section class="catalogo" id="catalogo-section">
-            <h1>Productos</h1>
-            <div class="filter-desktop">
-                <h4>Ordenar Por:</h4>
-                <select name="select">
-                    <option value="value1" selected>Precio</option>
-                    <option value="value2">Tamaño</option>
-                    <option value="value3">Tipo</option>
-                </select>
+        <div class="main-card">
+            <div class="image-box">
+                <img id="imagenOso" src="asset/images/oso.png">
             </div>
-            <section class="mobile-product">
-                <div class="product">
-                    <div class="product-image">
-                    </div>
-                    <div class="product-description">
-                        <h3>Viking Axe 1</h3>
-                        <button>Ver más</button>
-                    </div>
-                </div>
-            </section>
-            <div class="desktop-products">
-                <div class="product">
-                    <div class="product-image image-0">
-                    </div>
-                    <div class="product-description">
-                        <h3>Viking Axe 1</h3>
-                        <button>Ver más</button>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-image image-1">
-                    </div>
-                    <div class="product-description">
-                        <h3>Viking Axe 2</h3>
-                        <button>Ver más</button>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-image image-2">
-                    </div>
-                    <div class="product-description">
-                        <h3>Viking Axe 3</h3>
-                        <button>Ver más</button>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-image image-3">
-                    </div>
-                    <div class="product-description">
-                        <h3>Viking Axe 4</h3>
-                        <button>Ver más</button>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-image image-4">
-                    </div>
-                    <div class="product-description">
-                        <h3>Viking Axe 5</h3>
-                        <button>Ver más</button>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-image image-5">
-                    </div>
-                    <div class="product-description">
-                        <h3>Viking Axe 6</h3>
-                        <button>Ver más</button>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product-image image-6">
-                    </div>
-                    <div class="product-description">
-                        <h3>Viking Axe 7</h3>
-                        <button>Ver más</button>
-                    </div>
-                </div>
-            </div>
-            <div class="pagination">
-                <a href="#">&laquo;</a>
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">&raquo;</a>
-            </div>
-        </section>
-        <!--Eventos-->
-        <section class="eventos" id="eventos-section">
-            <h1>Eventos</h1>
-            <img class="main-event" src="asset/images/viking-festival.jpeg">
-            <div class="sub-event-main">
-                <div class="sub-event">
-                    <img src="asset/images/event1.jpg">
-                    <figcaption>Competencia de lucha con espadas</figcaption>
-                </div>
-                <div class="sub-event">
-                    <img src="asset/images/event2.jpg">
-                    <figcaption>Tatuajes corporales de fantasia</figcaption>
-                </div>
-                <div class="sub-event">
-                    <img src="asset/images/event3.webp">
-                    <figcaption>Competencia de tiro al arco</figcaption>
-                </div>
-                <div class="sub-event">
-                    <img src="asset/images/event4.jpg">
-                    <figcaption>Conoce el bebestible favorito, la Hidromiel</figcaption>
-                </div>
-            </div>
-        </section>
-        <!--Ubicación-->
-        <section class="ubicacion" id="ubicacion-section">
-            <h1>Proximamente con tienda física!</h1>
-        </section>
+            <h2>Oso de peluche</h2>
+            <input type="text" id="inputCantidad" name="cantidad" placeholder="Cantidad">
+            <input type="text" id="inputColor" name="color" placeholder="Color">
+            <h3>Precio: $25.000</h3>
+            <input type="submit" value="Calcular Total" onclick=calcular()>
 
-    </main>
-    <div class="space"></div>
-    <!--Main-->
-    <!--Footer-->
-    <footer>
-        <div class="social-network">
-            <a href="https://es.wikipedia.org/wiki/Facebook" target="_blank">
-                <i class="fab fa-facebook fa-2x" style="color: #ffffff;"></i>
-            </a>
-            <a href="https://es.wikipedia.org/wiki/Instagram" target="_blank">
-                <i class="fab fa-instagram fa-2x" style="color: #ffffff;"></i>
-            </a>
         </div>
-        <p>Todos los derechos reservados</p>
-    </footer>
+        <div class="secondary-card">
+            <h1 id="precio-total">Total:</h1>
+            <h1 id="cantidad-total">Cantidad: </h1>
+            <div class="color">
+                <h1 id="color-elegido">Color: </h1>
+                <div id="circulo-color"></div>
+            </div>
+            
 
+        </div>
+    </main>
+    
+    <script src="asset/js/script.js"></script>
 </body>
 
 </html>
