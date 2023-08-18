@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url(../images/backgroundEjercicio2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1{
+  text-align: center;
+  font-size: 80px;
+  margin-bottom: 100px;
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+section{
+  width: 33%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main img{
+  width: 60%;
+  height: 60%;
+}
+
+.cantidadSticker{
+  height: 30px;
+  width: 60%;
+  font-size: 30px;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info p{
+  text-align: center;
+  color: azure;
+}
+
+#respuesta{
+  height: 100px;
+  width: 100%;
+  font-size: 30px;
+}
+
+.boton{
+  width: 500px;
+  font-size: 30px;
+  color: aliceblue;
+  background-color: orange;
+  height: 50px;
+}
+
