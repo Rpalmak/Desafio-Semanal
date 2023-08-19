@@ -21,7 +21,6 @@ main{
 
 section{
   width: 33%;
-  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,13 +45,22 @@ main img{
 
 .info p{
   text-align: center;
-  color: azure;
+  
 }
 
 #respuesta{
-  height: 100px;
-  width: 100%;
+  visibility: hidden;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
   font-size: 30px;
+  color: #333;
+  line-height: 1.5;
+  border: 2px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #FFC800, #FF6200); /* Fondo degradado */
+  background-clip: padding-box; /* Evita que el fondo afecte al borde */
 }
 
 .boton{
