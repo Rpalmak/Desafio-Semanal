@@ -11,13 +11,15 @@
 
 <body>
     <div class="safe-box">
+      <h1>Caja Fuerte</h1>
         <div class="dial">
           <input type="number" class="dial-input" min="1" max="9" value="1">
           <input type="number" class="dial-input" min="1" max="9" value="2">
           <input type="number" class="dial-input" min="1" max="9" value="3">
         </div>
-        <button class="open-button">Abrir</button>
-      </div>
+        <button class="open-button" onclick="verificarCodigo()">Abrir</button>
+        <p id="respuesta"></p>
+    </div>
 <script src="asset/js/script.js"></script>
 </body>
 
