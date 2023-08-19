@@ -40,3 +40,21 @@ function calcularStickers(){
 }
   
 /*-----------------------------------EJERCICIO 3------------------------------------------*/
+
+function verificarCodigo(){
+  //aqui dejo los valores como string, ya que no los necesito como números para este ejercicio
+  const input1 = document.getElementsByClassName('dial-input')[0].value;
+  const input2 = document.getElementsByClassName('dial-input')[1].value;
+  const input3 = document.getElementsByClassName('dial-input')[2].value;
+  const parrafo=document.getElementById('respuesta');
+  let combinacion=input1+input2+input3;
+  if(combinacion=="911"){
+    parrafo.innerText="Password 1 correcto"
+  }
+  else if(combinacion=="714"){
+    parrafo.innerText="Password 2 correcto"
+  }
+  else{
+    parrafo.innerText="Password incorrecto"
+  }
+}

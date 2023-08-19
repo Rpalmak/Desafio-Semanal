@@ -10,14 +10,20 @@ body {
 
 .safe-box {
   text-align: center;
-  background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #b0b0b0, #e0e0e0);
+  border: 1px solid #a0a0a0;
 }
 
+
 .dial {
+  gap: 5px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -42,4 +48,10 @@ body {
 
 .open-button:hover {
   background-color: #0056b3;
+}
+
+#respuesta{
+  height: 50px;
+  text-align: center;
+  width: 150px;
 }
