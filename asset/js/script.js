@@ -1,21 +1,45 @@
 
+// const color="green";
+// function pintar(color)
+// {
+//     ele.style.backgroundColor = "yellow";
+// }
 
-function imagenBorde() {
-  const imagen = document.getElementsByTagName('img')[0];
-  imagen.classList.toggle("border");
+// const ele = document.getElementById("ele1");
+// ele.addEventListener("click", pintar);
+
+
+
+
+//ejercicio 4---------------------------------------------------------------------
+//--------------------------------------------------------------------------------
+const cambiarColor = (cajaID) => {
+    const elemento = document.getElementById(cajaID);
+    elemento.style.backgroundColor = "black";
 }
 
-function calcularStickers(){
-  const cantidadSticker1 = Number(document.getElementById('cantidadSticker1').value);
-  const cantidadSticker2 = Number(document.getElementById('cantidadSticker2').value);
-  const cantidadSticker3 = Number(document.getElementById('cantidadSticker3').value);
-  let suma=cantidadSticker1+cantidadSticker2+cantidadSticker3;
-  if(suma<=10){
-    let parrafo = document.getElementById('respuesta');
-    parrafo.innerText="Llevas "+suma+" stickers";
-  }
-  else{
-    alert("Llevas demasiados stickers")
-  }
-  console.log(cantidadSticker1);
-}
+document.getElementById("box1").addEventListener("click", () => cambiarColor("box1"));
+document.getElementById("box2").addEventListener("click", () => cambiarColor("box2"));
+document.getElementById("box3").addEventListener("click", () => cambiarColor("box3"));
+document.getElementById("box4").addEventListener("click", () => cambiarColor("box4"));
+
+//--------------------------------------------------------------------------------
+let color=""
+const elemento = document.getElementById("key");
+document.addEventListener('keydown', function (event) 
+{
+    if (event.key === 'a') {
+    color="pink";
+    elemento.style.backgroundColor=color
+    } 
+    else if (event.key === 's') {
+    color="orange"
+    elemento.style.backgroundColor=color
+    }
+    else if (event.key === 'd') {
+    color="lightblue"
+    elemento.style.backgroundColor=color
+    }
+
+})
+//--------------------------------------------------------------------------------
