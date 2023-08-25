@@ -1,25 +1,23 @@
-/* Ejercicio 1 */
-
 *{
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
 
-main{
-  height: 100vh;
+div{
+  width: 200px;
+  height: 200px;
+}
+
+main section{
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+  height: 300px;
 }
 
-main img{
-  width: 400px;
-  height: 80%;
+#key{
+  width: 200px;
+  height: 200px;
 }
-
-.border{
-  border: 2px solid red;
-}
-
-
-/* Ejercicio 2 */
