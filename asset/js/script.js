@@ -10,33 +10,19 @@
 
  
 
-
-function imagenBorde() {
-  const imagen = document.getElementsByTagName('img')[0];
-  imagen.classList.toggle("border");
-}
-
 /*-----------------------------------EJERCICIO 2------------------------------------------*/
 
-const parrafo = document.getElementById('respuesta');
-
-function eliminarMensaje(){
-  setTimeout(function() {
-    parrafo.style.visibility = "hidden";
-  }, 5000);
+const cambiarColor = (cajaID) => {
+  const elemento = document.getElementById(cajaID);
+  if (elemento) {
+      const colores = ['blue', 'red', 'green', 'yellow'];
+      const colorActual = elemento.style.backgroundColor;
+      const nuevoColor = colores[(colores.indexOf(colorActual) + 1) % colores.length];
+      elemento.style.backgroundColor = nuevoColor;
+  }
 }
 
-function calcularStickers(){
-  const cantidadSticker1 = Number(document.getElementById('cantidadSticker1').value);
-  const cantidadSticker2 = Number(document.getElementById('cantidadSticker2').value);
-  const cantidadSticker3 = Number(document.getElementById('cantidadSticker3').value);
-  let suma=cantidadSticker1+cantidadSticker2+cantidadSticker3;
-  if(suma<=10){
-    let parrafo = document.getElementById('respuesta');
-    parrafo.innerText="Llevas "+suma+" stickers";
-  }
-  else{
-    alert("Llevas demasiados stickers")
-  }
-  console.log(cantidadSticker1);
-}
+document.getElementById("box1").addEventListener("click", () => cambiarColor("box1"));
+document.getElementById("box2").addEventListener("click", () => cambiarColor("box2"));
+document.getElementById("box3").addEventListener("click", () => cambiarColor("box3"));
+document.getElementById("box4").addEventListener("click", () => cambiarColor("box4"));
