@@ -5,6 +5,6 @@ function example(a, b, c){
   }
 
 //funcion transformada a función de expresion 
-  example = function(a,b,c){
+    example = function(a,b,c){
     return a+b+c
   }

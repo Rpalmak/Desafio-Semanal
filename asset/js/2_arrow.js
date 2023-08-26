@@ -6,5 +6,5 @@ let suma = function(a, b){
 
 //arrow function
 
-suma = (a,b) => a+b;
+ suma = (a,b) => a+b;
     
