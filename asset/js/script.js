@@ -54,7 +54,7 @@ const propiedades_alquiler = [
   {
     nombre: "Apartamento en el centro de la ciudad",
     src: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXBhcnRtZW50fGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60",
-    descripcion:"Este apartamento de 2 habitaciones está ubicado en el corazón de la ciudad, cerca de todo.",
+    descripcion: "Este apartamento de 2 habitaciones está ubicado en el corazón de la ciudad, cerca de todo.",
     ubicacion: "123 Main Street, Anytown, CA 91234",
     habitaciones: 2,
     bano: 2,
@@ -100,29 +100,71 @@ const propiedades_alquiler = [
   },
 ];
 
-
+const currentURL = window.location.href;
 let html = "";
 const listaVenta = document.getElementById("contentVenta");
 const listaAlquiler = document.getElementById("contentAlquiler");
 
-if(listaVenta){
-  for(let i of propiedades_venta){
-    generateHTML(i);
+if (currentURL.includes("index.html")) 
+{
+  let contador=0;
+  if (listaVenta) {
+    for (let i of propiedades_venta) 
+    {
+      if (contador < 3) {
+        generateHTML(i);
+        contador++;
+      } 
+      else 
+      {
+        break;
+      }
+    }
+    listaVenta.innerHTML = html;
+    html = "";
+    contador=""
   }
-  listaVenta.innerHTML = html;
-  html="";
+
+  if (listaAlquiler) {
+    for (let i of propiedades_alquiler) 
+    {
+      if (contador < 3) {
+        generateHTML(i);
+        contador++;
+      } 
+      else 
+      {
+        break;
+      }
+    }
+    listaAlquiler.innerHTML = html;
+    html = "";
+    contador=""
+  }
 }
 
-if(listaAlquiler){
-  for(let i of propiedades_alquiler){
-    generateHTML(i);
+else {
+  if (listaVenta) {
+    for (let i of propiedades_venta) {
+      generateHTML(i);
+    }
+    listaVenta.innerHTML = html;
+    html = "";
   }
-  listaAlquiler.innerHTML = html;
-  html="";
+
+  if (listaAlquiler) {
+    for (let i of propiedades_alquiler) {
+      generateHTML(i);
+    }
+    listaAlquiler.innerHTML = html;
+    html = "";
+  }
 }
 
 
-function generateHTML(i){
+
+
+function generateHTML(i) {
   html += `
   <div class="col-md-4 mb-4 ps-2 pe-2">
     <div class="card">
@@ -155,7 +197,7 @@ function generateHTML(i){
         </div>
     </div>
   </div>`;
-  
+
 }
 
 
