@@ -1,19 +1,39 @@
-.main-section {
-    background-image: url('../img/img-main.jpeg');
-    background-size: cover; /* La imagen cubrirá todo el ancho y largo */
-    background-position: center;
-    height: 300px;
+main{
+    height: 100vh;
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    color: #fff;
-    text-align: center;
+    align-items: center;
 }
 
-.card {
-    height: 100px;
+p{
+    margin: 0 !important;
 }
 
-.card img{
-    height: 250px;
+.main-box {
+    margin: 20px;
+    padding: 20px;
+    height: 500px;
+    width: 1000px;
+    background-color: lightgray;
 }
+
+.tarea-box{
+    width: 100%;
+}
+
+.tarea-box input{
+    width: 80%;
+    height: 40px;
+}
+
+td{
+    padding: 5px;
+}
+
+tr[data-estado="true"] td {
+    text-decoration: line-through;
+    color: #555;
+}
+  
+  

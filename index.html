@@ -8,48 +8,34 @@
     <!-- CSS -->
     <link rel="stylesheet" href="asset/css/estilos.css" />
     <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Inmobiliaria ADL</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="propiedades_venta.html">En venta</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="propiedades_alquiler.html">Alquiler</a>
-                    </li>
-                </ul>
+
+    <main class="container-fluid main-section">
+        <div class="main-box">
+            <h1>To Do List</h1>
+            <hr>
+            <p class="mb-2"><b>Nueva Tarea</b></p>
+            <div class="tarea-box d-flex flex-row align-items-center">
+                <input id="input">
+                <button class="btn btn-success ms-3" onclick=agregarTarea()>Agregar</button>
+            </div>
+            <div id="info">
+                <table id="miTabla">
+                    <tr>
+                        <td><b>ID</b></td>
+                        <td><b>Tarea</b></td>
+                    </tr>
+                    <!-- Aquí se llenarán las filas de la tabla con JavaScript -->
+                </table>
             </div>
         </div>
-    </nav>
-    <main class="container-fluid main-section">
-        <h1 class="text-white">Encuentra tu nueva propiedad</h1>
     </main>
-    <div class="container mt-5">
-        <!-- Propiedades en venta -->
-        <section id="venta">
-            <h2>Propiedades en venta</h2>
-            <div id="contentVenta" class="d-flex flex-wrap"></div>
-            <a href="propiedades_venta.html" class="btn btn-dark">Ver todas las propiedades en venta</a>
-        </section>
-        <hr />
-        <!-- Propiedades en alquiler -->
-        <section id="alquiler" class="mb-5">
-            <h2>Propiedades en alquiler</h2>
-            <div id="contentAlquiler" class="d-flex flex-wrap"></div>
-            <a href="propiedades_alquiler.html" class="btn btn-dark">Ver todas las propiedades en alquiler</a>
-        </section>
-    </div>
+
     <!-- Font awesome -->
     <script src="asset/js/script.js"></script>
     <script src="https://kit.fontawesome.com/f5bdbb41e0.js" crossorigin="anonymous"></script>
