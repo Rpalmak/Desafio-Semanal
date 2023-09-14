@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moneda</title>
+    <link rel="stylesheet" href="asset/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+</head>
+<body>
+<h1>Conversor de monedas Nacional</h1>
+    <div class="container">
+        <h2>Pesos CLP</h2>
+        <div class="form-group">
+            <label for="monto">Ingrese el monto en CLP:</label>
+            <input type="text" class="form-control" id="monto" placeholder="Ingrese el monto en CLP">
+        </div>
+        <p>Moneda a convertir:</p>
+        <div class="form-group">
+            <select class="form-control">
+                <option>Seleccione moneda</option>
+                <option>Dólar</option>
+                <option>Peso argentino</option>
+                <option>Peso mexicano</option>
+            </select>
+        </div>
+        <button type="button" class="btn btn-primary">Buscar</button>
+        <p>Resultado:</p>
+    </div>
+
+    <!-- Agrega la referencia a Bootstrap JS (jQuery y Popper.js son necesarios para Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

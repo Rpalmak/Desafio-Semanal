@@ -1,25 +1,31 @@
-/* Ejercicio 1 */
-
-*{
-  margin: 0;
-  padding: 0;
-}
-
-main{
-  height: 100vh;
+body {
+  background-color: darkslategrey !important;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-main img{
-  width: 400px;
-  height: 80%;
+.container {
+  background-color: aliceblue;
+  width: 30% !important;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 
-.border{
-  border: 2px solid red;
+h1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  position: absolute; /* Posición absoluta para superponerlo */
+  top: 10px; /* Ajusta la posición vertical según tus necesidades */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Centra horizontalmente */
+  z-index: 999; /* Un valor alto de z-index para superponerlo */
 }
 
-
-/* Ejercicio 2 */
