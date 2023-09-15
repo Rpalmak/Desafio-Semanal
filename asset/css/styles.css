@@ -1,20 +1,19 @@
 /* Ejercicio 1 */
 
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
 
 body {
   background-color: darkslategrey !important;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Cambiamos la dirección de flex a columna */
   align-items: center;
   height: 100vh;
   margin: 0;
 }
-
 
 .container {
   background-color: aliceblue;
@@ -23,18 +22,17 @@ body {
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px auto; /* Centramos horizontalmente y le damos margen */
 }
 
-
-h1 {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+h1{
   color: white;
-  position: absolute; /* Posición absoluta para superponerlo */
-  top: 10px; /* Ajusta la posición vertical según tus necesidades */
-  left: 50%; /* Centra horizontalmente */
-  transform: translateX(-50%); /* Centra horizontalmente */
-  z-index: 999; /* Un valor alto de z-index para superponerlo */
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.grafica {
+  width: 100%;
+  margin: 10px auto; /* Centramos horizontalmente y le damos margen */
 }
