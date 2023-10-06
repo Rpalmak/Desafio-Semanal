@@ -1,53 +1,14 @@
-.header{
-  background-color: antiquewhite;
+
+.center-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  min-height: 100vh; 
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 }
 
-
-.mycard {
-  width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  margin: 16px;
-  background-color: #fff;
-}
-
-
-.mycard img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 12px;
-  border-radius: 8px; 
-}
-
-.mycard h2{
-  text-align: center;
-  margin-top: 25px;
-  font-size: 20px; 
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.mycard .desc {
-  font-size: 16px;
-  color: #666;
-}
-
-.mycard .badge{
-  margin-top: 15px;
-  display: block;
-}
-
-.footer {
-  position: absolute; 
-  bottom: 0; 
-  width: 100%; 
-  background-color: #333; 
-  color: #fff; 
-  padding: 20px; 
-  text-align: center; 
+input::placeholder {
+  color: #a7a7a7;
 }
