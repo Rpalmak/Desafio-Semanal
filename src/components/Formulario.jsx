@@ -4,7 +4,7 @@ import { useState } from "react";
 import Alert from "./Alert";
 
 
-// Componente Formulario
+// Componente Formulari
 function Formulario() {
   const estilosForm = {
     width: "100%",
