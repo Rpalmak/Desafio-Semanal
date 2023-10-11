@@ -1,12 +1,8 @@
-//import React from 'react'
 import SocialButton from './SocialButton'
 import Formulario from './Formulario'
-import Alert from './Alert'
-import PropTypes from 'prop-types';
 import { faFacebook, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-function Registro({validationMessage}) {
-
+function Registro() {
   const estilos = {
     width: '450px',
     padding: '20px',
@@ -20,21 +16,16 @@ function Registro({validationMessage}) {
     height: '100%',
     backgroundColor: '#f5f5f5', 
   };
-  const iconosRedesSociales = [faFacebook, faGithub, faLinkedin];
   
+  const iconosRedesSociales = [faFacebook, faGithub, faLinkedin];
+
   return (
     <div className='registro-container' style={estilos}>
       <h1 className='text-center'>Crea una cuenta</h1>
       <SocialButton icons={iconosRedesSociales} />
-      <Formulario/>
-      <Alert validationMessage={validationMessage}/>
+      <Formulario />
     </div>
   )
 }
 
-
-Registro.propTypes = {
-  validationMessage: PropTypes.node,
-};
-
-export default Registro
+export default Registro;

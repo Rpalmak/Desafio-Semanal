@@ -1,133 +1,72 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useState } from "react";
-import Alert from "./Alert";
+import React, { useState } from 'react';
+import Alert from './Alert';
 
-
-// Componente Formulari
 function Formulario() {
-  const estilosForm = {
-    width: "100%",
-    textAlign: "center",
-    backgroundColor: "#fff",
-    borderRadius: "8px",
-    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-    maxWidth: "100%",
-    boxSizing: "border-box",
-  };
-
-  const estilosInput = {
-    width: "100%",
-    textAlign: "center",
-    backgroundColor: "#fff",
-    borderRadius: "8px",
-    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-    maxWidth: "100%",
-    boxSizing: "border-box",
-    padding: "10px",
-    border: "1px solid #ccc",
-  };
-
-  const estilosSubmit = {
-    width: "100%",
-    textAlign: "center",
-    borderRadius: "8px",
-    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-    maxWidth: "100%",
-    boxSizing: "border-box",
-  };
-
-  
-
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [contrasena, setContrasena] = useState("");
   const [contrasena2, setContrasena2] = useState("");
-  const [alert, setAlert] = useState(false);
-  
+  const [validationMessage, setValidationMessage] = useState("");
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-  const handleSubmit = (alert) => {
-    if (!nombre.trim() || !email.trim() || !contrasena || !contrasena2){
-      setAlert(false)
+    if (!nombre.trim() || !email.trim() || !contrasena || !contrasena2) {
+      setValidationMessage("Todos los campos son obligatorios");
+      return;
     }
-    else{
-      setAlert("registro exitoso")
-      setAlert(true)
+
+    if (contrasena !== contrasena2) {
+      setValidationMessage("Las contraseñas deben ser iguales");
+      return;
     }
-    if(contrasena != contrasena2){
-      setAlert("las contraseñas deben ser iguales")
-    }
+
+    setNombre("");
+    setEmail("");
+    setContrasena("");
+    setContrasena2("");
+    setValidationMessage("Registro exitoso!");
+
+    // Ocultar el mensaje después de 3 segundos
+    setTimeout(() => {
+      setValidationMessage("");
+    }, 3000);
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="form-container">
-      <p className="mt-4" style={estilosForm}>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          minLength="4"
-          maxLength="8"
-          size="10"
-          style={estilosInput}
-          placeholder="Nombre"
+    <div>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        <input 
+          type="text" 
+          placeholder="Nombre" 
           value={nombre}
-          onChange={(e)=> setNombre(e.target.value)}
+          onChange={e => setNombre(e.target.value)} 
         />
-      </p>
-      <p className="mt-4" style={estilosForm}>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          style={estilosInput}
-          placeholder="tuemail@ejemplo.com"
+        <input 
+          type="email" 
+          placeholder="Email" 
           value={email}
-          onChange={(e)=> setEmail(e.target.value)}
+          onChange={e => setEmail(e.target.value)} 
         />
-      </p>
-      <p className="mt-4" style={estilosForm}>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          required
-          minLength="6"
-          style={estilosInput}
-          placeholder="Contraseña"
+        <input 
+          type="password" 
+          placeholder="Contraseña" 
           value={contrasena}
-          onChange={(e)=> setContrasena(e.target.value)}
+          onChange={e => setContrasena(e.target.value)} 
         />
-      </p>
-      <p className="mt-4" style={estilosForm}>
-        <input
-          type="password"
-          id="confirmPassword"
-          name="confirmPassword"
-          required
-          minLength="6"
-          style={estilosInput}
-          placeholder="Confirma tu contraseña"
+        <input 
+          type="password" 
+          placeholder="Confirmar Contraseña" 
           value={contrasena2}
-          onChange={(e)=> setContrasena2(e.target.value)}
+          onChange={e => setContrasena2(e.target.value)} 
         />
-      </p>
-      <p>
-        <button className="btn btn-success" style={estilosSubmit} onClick={handleSubmit}>
+        <button className="btn btn-success" type="submit">
           Registrarse
         </button>
-      </p>
+      </form>
+      {validationMessage && <Alert validationMessage={validationMessage} />}
     </div>
-    </form>
-    
   );
 }
-
-
-
 
 export default Formulario;
