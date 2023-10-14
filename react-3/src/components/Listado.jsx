@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function Listado({colaboradores}) {
-  
+  console.log(colaboradores);
   return (
     <div>
       <table className="table table-bordered table-striped">

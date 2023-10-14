@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { BaseColaboradores } from '../assets/BaseColaboradores';
 
-function Formulario() {
+function Formulario({ agregarColaborador }) {
   const estilosContainer = {
     margin: '20px',
     padding: '20px',
@@ -22,29 +21,51 @@ function Formulario() {
     borderRadius: '16px',
   };
 
-
-  const [nombre, setNombre] = useState("");
-  const [email, setEmail] = useState("");
-  const [edad, setEdad] = useState("");
-  const [cargo, setCargo] = useState("");
-  const [telefono, setTelefono] = useState("");
-  const [colaboradores, setColaboradores] = useState(BaseColaboradores);
-
-  const agregarColaborador = (nuevoColaborador) => {
-    setColaboradores([...colaboradores, nuevoColaborador]);
-  };
+  const [nombre, setNombre] = useState('');
+  const [email, setEmail] = useState('');
+  const [edad, setEdad] = useState('');
+  const [cargo, setCargo] = useState('');
+  const [telefono, setTelefono] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Validación de campos vacíos
+    if (!nombre || !email || !edad || !cargo || !telefono) {
+      alert('Por favor, complete todos los campos.');
+      return;
+    }
+
+    // Validación de edad como número
+    if (isNaN(edad)) {
+      alert('La edad debe ser un número válido.');
+      return;
+    }
+
+    // Validación de teléfono como número
+    if (isNaN(telefono)) {
+      alert('El teléfono debe ser un número válido.');
+      return;
+    }
+
     const nuevoColaborador = {
       nombre,
-      email,
+      correo: email,
       edad,
       cargo,
       telefono,
     };
-    agregarColaborador(nuevoColaborador); 
-  }
+
+    // Limpieza de los campos después de agregar un colaborador
+    setNombre('');
+    setEmail('');
+    setEdad('');
+    setCargo('');
+    setTelefono('');
+
+    // Llamamos a la función para agregar colaborador
+    agregarColaborador(nuevoColaborador);
+  };
 
   return (
     <div style={estilosContainer}>
@@ -52,6 +73,7 @@ function Formulario() {
       <div style={{ zIndex: '1', position: 'relative', textAlign: 'center' }}>
         <h1 className="mb-5">Agregar Colaborador</h1>
         <form onSubmit={handleSubmit}>
+          {/* Campos del formulario */}
           <div className="mb-3">
             <input
               type="text"
