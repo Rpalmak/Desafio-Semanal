@@ -12,7 +12,7 @@ function App() {
   const [alertMessage, setAlertMessage] = useState('');
   const [alertType, setAlertType] = useState('');
 
-  // Funcion para agregar nuevo colaborador
+  // Funcion para agregar colaborador
   const agregarColaborador = (nuevoColaborador) => {
     nuevoColaborador.id = Date.now().toString();
     setColaboradores([...colaboradores, nuevoColaborador]);
