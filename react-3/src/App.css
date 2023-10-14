@@ -1,0 +1,22 @@
+/* App.css */
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%; 
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+  
+}
+
+body{
+  background: rgb(34, 195, 69);
+  background: linear-gradient(0deg, rgb(34, 184, 195) 0%, rgb(118, 201, 80) 100%);
+}
